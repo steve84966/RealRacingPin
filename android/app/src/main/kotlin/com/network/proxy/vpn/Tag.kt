@@ -1,4 +1,4 @@
-package com.network.proxy.vpn
+package com.network.realracingpin.vpn
 
 
 fun formatTag(tag: String): String {

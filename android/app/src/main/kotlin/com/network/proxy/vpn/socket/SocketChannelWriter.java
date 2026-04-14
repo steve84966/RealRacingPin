@@ -1,12 +1,12 @@
-package com.network.proxy.vpn.socket;
+package com.network.realracingpin.vpn.socket;
 
 import androidx.annotation.NonNull;
 import android.util.Log;
 
 
-import com.network.proxy.vpn.Connection;
-import com.network.proxy.vpn.TagKt;
-import com.network.proxy.vpn.transport.protocol.TCPPacketFactory;
+import com.network.realracingpin.vpn.Connection;
+import com.network.realracingpin.vpn.TagKt;
+import com.network.realracingpin.vpn.transport.protocol.TCPPacketFactory;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;

@@ -1,12 +1,12 @@
-package com.network.proxy
+package com.network.realracingpin
 
 import android.content.Intent
 import android.content.res.Configuration
-import com.network.proxy.plugin.AppLifecyclePlugin
-import com.network.proxy.plugin.InstalledAppsPlugin
-import com.network.proxy.plugin.PictureInPicturePlugin
-import com.network.proxy.plugin.ProcessInfoPlugin
-import com.network.proxy.plugin.VpnServicePlugin
+import com.network.realracingpin.plugin.AppLifecyclePlugin
+import com.network.realracingpin.plugin.InstalledAppsPlugin
+import com.network.realracingpin.plugin.PictureInPicturePlugin
+import com.network.realracingpin.plugin.ProcessInfoPlugin
+import com.network.realracingpin.plugin.VpnServicePlugin
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 
@@ -51,7 +51,7 @@ class MainActivity : FlutterActivity() {
             }
 
             val alertDialog = Intent(applicationContext, VpnAlertDialog::class.java)
-                .setAction("com.network.proxy.ProxyVpnService")
+                .setAction("com.network.realracingpin.ProxyVpnService")
             alertDialog.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(alertDialog)
             return

@@ -1,4 +1,4 @@
-package com.network.proxy.plugin
+package com.network.realracingpin.plugin
 
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager

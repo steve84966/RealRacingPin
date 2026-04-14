@@ -1,4 +1,4 @@
-package com.network.proxy.vpn.socket
+package com.network.realracingpin.vpn.socket
 
 import java.net.DatagramSocket
 import java.net.Socket

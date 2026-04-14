@@ -1,4 +1,4 @@
-package com.network.proxy.plugin
+package com.network.realracingpin.plugin
 
 import android.app.PendingIntent
 import android.app.PictureInPictureParams
@@ -10,7 +10,7 @@ import android.content.IntentFilter
 import android.graphics.drawable.Icon
 import android.os.Build
 import android.util.Rational
-import com.network.proxy.ProxyVpnService
+import com.network.realracingpin.ProxyVpnService
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodChannel
 import android.util.Log
@@ -30,7 +30,7 @@ class PictureInPicturePlugin : AndroidFlutterPlugin() {
     ///广播事件接受者
     private val vpnBroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent?) {
-            Log.d("com.network.proxy", "onReceive ${intent?.action}")
+            Log.d("com.network.realracingpin", "onReceive ${intent?.action}")
 
             if (context == null || (intent?.action != VPN_ACTION && intent?.action != CLEAN_ACTION)) {
                 return

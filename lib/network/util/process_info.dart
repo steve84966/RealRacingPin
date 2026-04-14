@@ -45,7 +45,7 @@ class ProcessInfoUtils {
           return app;
         }
         if (socketAddress.host == '127.0.0.1') {
-          return ProcessInfo('com.network.proxy', "ProxyPin", '', os: Platform.operatingSystem);
+          return ProcessInfo('com.network.realracingpin', "ProxyPin", '', os: Platform.operatingSystem);
         }
         return null;
       }

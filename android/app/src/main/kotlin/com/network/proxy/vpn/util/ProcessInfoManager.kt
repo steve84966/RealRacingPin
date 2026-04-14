@@ -1,4 +1,4 @@
-package com.network.proxy.vpn.util
+package com.network.realracingpin.vpn.util
 
 import android.content.Context
 import android.net.ConnectivityManager
@@ -7,9 +7,9 @@ import android.os.Process
 import android.system.OsConstants
 import android.util.Log
 import androidx.annotation.RequiresApi
-import com.network.proxy.ProxyVpnService
-import com.network.proxy.plugin.ProcessInfo
-import com.network.proxy.vpn.Connection
+import com.network.realracingpin.ProxyVpnService
+import com.network.realracingpin.plugin.ProcessInfo
+import com.network.realracingpin.vpn.Connection
 import kotlinx.coroutines.CoroutineScope
 import java.io.File
 import java.net.InetSocketAddress

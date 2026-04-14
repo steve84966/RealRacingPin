@@ -1,6 +1,6 @@
-package com.network.proxy.plugin
+package com.network.realracingpin.plugin
 
-import com.network.proxy.ProxyVpnService
+import com.network.realracingpin.ProxyVpnService
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodChannel
 

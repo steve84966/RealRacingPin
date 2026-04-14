@@ -1,7 +1,7 @@
-package com.network.proxy.vpn.transport.protocol
+package com.network.realracingpin.vpn.transport.protocol
 
-import com.network.proxy.vpn.transport.Packet
-import com.network.proxy.vpn.util.PacketUtil
+import com.network.realracingpin.vpn.transport.Packet
+import com.network.realracingpin.vpn.util.PacketUtil
 import java.nio.ByteBuffer
 import java.util.concurrent.ThreadLocalRandom
 

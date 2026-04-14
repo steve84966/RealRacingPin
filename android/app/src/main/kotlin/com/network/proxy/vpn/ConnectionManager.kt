@@ -1,12 +1,12 @@
-package com.network.proxy.vpn
+package com.network.realracingpin.vpn
 
 import android.os.Build
 import android.util.Log
-import com.network.proxy.vpn.socket.CloseableConnection
-import com.network.proxy.vpn.socket.Constant
-import com.network.proxy.vpn.socket.ProtectSocketHolder.Companion.protect
-import com.network.proxy.vpn.util.PacketUtil
-import com.network.proxy.vpn.util.ProcessInfoManager
+import com.network.realracingpin.vpn.socket.CloseableConnection
+import com.network.realracingpin.vpn.socket.Constant
+import com.network.realracingpin.vpn.socket.ProtectSocketHolder.Companion.protect
+import com.network.realracingpin.vpn.util.PacketUtil
+import com.network.realracingpin.vpn.util.ProcessInfoManager
 import java.io.IOException
 import java.net.InetSocketAddress
 import java.net.SocketAddress

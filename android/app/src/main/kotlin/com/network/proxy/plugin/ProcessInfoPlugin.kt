@@ -1,6 +1,6 @@
-package com.network.proxy.plugin
+package com.network.realracingpin.plugin
 
-import com.network.proxy.vpn.util.ProcessInfoManager
+import com.network.realracingpin.vpn.util.ProcessInfoManager
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
 import io.flutter.plugin.common.MethodChannel

@@ -1,4 +1,4 @@
-package com.network.proxy.vpn.util
+package com.network.realracingpin.vpn.util
 
 import java.nio.ByteBuffer
 import kotlin.math.min

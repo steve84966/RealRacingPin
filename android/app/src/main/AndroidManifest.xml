@@ -27,9 +27,9 @@
     <application
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
-        android:label="ProxyPin">
+        android:label="RealRacing Pin">
         <activity
-            android:name="com.network.proxy.MainActivity"
+            android:name="com.network.realracingpin.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:exported="true"
             android:hardwareAccelerated="true"
@@ -64,7 +64,7 @@
             android:name=".VpnAlertDialog"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.network.proxy.ProxyVpnService" />
+                <action android:name="com.network.realracingpin.ProxyVpnService" />
             </intent-filter>
         </activity>
         <!-- Don't delete the meta-data below.

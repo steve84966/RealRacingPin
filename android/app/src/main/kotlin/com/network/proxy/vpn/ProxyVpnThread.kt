@@ -1,10 +1,10 @@
-package com.network.proxy.vpn
+package com.network.realracingpin.vpn
 
 import android.os.ParcelFileDescriptor
 import android.util.Log
-import com.network.proxy.ProxyVpnService.Companion.MAX_PACKET_LEN
-import com.network.proxy.vpn.socket.ClientPacketWriter
-import com.network.proxy.vpn.socket.SocketNIODataService
+import com.network.realracingpin.ProxyVpnService.Companion.MAX_PACKET_LEN
+import com.network.realracingpin.vpn.socket.ClientPacketWriter
+import com.network.realracingpin.vpn.socket.SocketNIODataService
 import java.io.FileInputStream
 import java.io.FileOutputStream
 import java.io.InterruptedIOException

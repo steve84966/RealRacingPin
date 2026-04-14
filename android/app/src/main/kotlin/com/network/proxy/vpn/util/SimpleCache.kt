@@ -1,4 +1,4 @@
-package com.network.proxy.vpn.util
+package com.network.realracingpin.vpn.util
 
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.Executors

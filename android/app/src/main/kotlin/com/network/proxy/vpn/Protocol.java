@@ -1,4 +1,4 @@
-package com.network.proxy.vpn;
+package com.network.realracingpin.vpn;
 
 public enum Protocol {
     TCP,

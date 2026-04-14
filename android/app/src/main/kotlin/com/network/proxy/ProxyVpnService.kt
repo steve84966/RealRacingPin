@@ -1,4 +1,4 @@
-package com.network.proxy
+package com.network.realracingpin
 
 import android.app.Activity
 import android.app.Notification
@@ -15,10 +15,10 @@ import android.os.ParcelFileDescriptor
 import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
-import com.network.proxy.plugin.VpnServicePlugin.Companion.REQUEST_CODE
-import com.network.proxy.vpn.ProxyVpnThread
-import com.network.proxy.vpn.socket.ProtectSocket
-import com.network.proxy.vpn.socket.ProtectSocketHolder
+import com.network.realracingpin.plugin.VpnServicePlugin.Companion.REQUEST_CODE
+import com.network.realracingpin.vpn.ProxyVpnThread
+import com.network.realracingpin.vpn.socket.ProtectSocket
+import com.network.realracingpin.vpn.socket.ProtectSocketHolder
 import java.net.InetAddress
 
 /**
@@ -187,7 +187,7 @@ class ProxyVpnService : VpnService(), ProtectSocket {
         )
         if (vpnInterface == null) {
             val alertDialog = Intent(applicationContext, VpnAlertDialog::class.java)
-                .setAction("com.network.proxy.ProxyVpnService")
+                .setAction("com.network.realracingpin.ProxyVpnService")
             alertDialog.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(alertDialog)
             return

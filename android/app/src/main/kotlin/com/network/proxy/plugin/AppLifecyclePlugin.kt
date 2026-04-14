@@ -1,4 +1,4 @@
-package com.network.proxy.plugin
+package com.network.realracingpin.plugin
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodChannel

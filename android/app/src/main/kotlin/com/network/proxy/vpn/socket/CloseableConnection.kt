@@ -1,6 +1,6 @@
-package com.network.proxy.vpn.socket
+package com.network.realracingpin.vpn.socket
 
-import com.network.proxy.vpn.Connection
+import com.network.realracingpin.vpn.Connection
 
 interface CloseableConnection {
     /**

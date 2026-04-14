@@ -1,10 +1,10 @@
-package com.network.proxy.vpn.transport.icmp;
+package com.network.realracingpin.vpn.transport.icmp;
 
 
 import androidx.annotation.NonNull;
 
-import com.network.proxy.vpn.transport.protocol.IP4Header;
-import com.network.proxy.vpn.util.PacketUtil;
+import com.network.realracingpin.vpn.transport.protocol.IP4Header;
+import com.network.realracingpin.vpn.util.PacketUtil;
 
 import java.io.ByteArrayOutputStream;
 import java.nio.ByteBuffer;

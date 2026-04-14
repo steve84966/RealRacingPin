@@ -1,10 +1,10 @@
-package com.network.proxy.vpn.socket;
+package com.network.realracingpin.vpn.socket;
 
 import android.util.Log;
 
 
-import com.network.proxy.vpn.Connection;
-import com.network.proxy.vpn.TagKt;
+import com.network.realracingpin.vpn.Connection;
+import com.network.realracingpin.vpn.TagKt;
 
 import java.io.IOException;
 import java.nio.channels.ClosedChannelException;
