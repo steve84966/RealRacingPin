@@ -1497,7 +1497,7 @@ abstract class AppLocalizations {
   /// No description provided for @proxyPinSoftware.
   ///
   /// In en, this message translates to:
-  /// **'ProxyPin Open source traffic capture software for all platforms'**
+  /// **'Based on ProxyPin Open source traffic capture software for all platforms'**
   String get proxyPinSoftware;
 
   /// No description provided for @prompt.

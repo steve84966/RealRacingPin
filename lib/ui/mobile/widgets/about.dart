@@ -38,21 +38,28 @@ class _AboutState extends State<About> {
   Widget build(BuildContext context) {
     AppLocalizations localizations = AppLocalizations.of(context)!;
 
-    String gitHub = "https://github.com/wanghongenpin/proxypin";
-    final String sponsorUrl = "https://github.com/sponsors/wanghongenpin";
+    String gitHub = "https://github.com/steve84966/RealRacingPin";
+    String gitHubFrom = "https://github.com/wanghongenpin/proxypin";
+    //final String sponsorUrl = "https://github.com/sponsors/wanghongenpin";
 
     return Scaffold(
         appBar: AppBar(title: Text(localizations.about, style: const TextStyle(fontSize: 16)), centerTitle: true),
         body: ListView(padding: const EdgeInsets.all(12), children: [
           const SizedBox(height: 6),
-          Center(child: Text("ProxyPin", style: Theme.of(context).textTheme.headlineSmall)),
+          Center(child: Text("ProxyPin for Real Racing 3", style: Theme.of(context).textTheme.headlineSmall)),
           const SizedBox(height: 10),
           Center(
               child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Text(localizations.proxyPinSoftware, textAlign: TextAlign.center))),
-          const SizedBox(height: 8),
-          Center(child: Text("Version ${AppConfiguration.version}")),
+          const SizedBox(height: 6),
+          Center(child: Text("Real Racing 3 v14.0.1 Supported.",style:Theme.of(context).textTheme.bodySmall)),
+
+          Center(child: Text("The earlier versions were not tested. You can try it.",style:Theme.of(context).textTheme.bodySmall)),
+          const SizedBox(height: 10),
+          Center(child: Text("Version ${AppConfiguration.version}(alpha)")),
+          const SizedBox(height: 2),
+          Center(child: Text("BuildTime: 1776256962(unix)")),
           const SizedBox(height: 12),
           Card(
               color: Colors.transparent,
@@ -62,10 +69,17 @@ class _AboutState extends State<About> {
                   borderRadius: BorderRadius.circular(10)),
               child: Column(children: [
                 ListTile(
-                    title: const Text("GitHub"),
+                    title: const Text("GitHub (this Project)"),
                     trailing: const Icon(Icons.open_in_new, size: 22),
                     onTap: () {
                       _safeLaunch(Uri.parse(gitHub));
+                    }),
+                Divider(height: 0, thickness: 0.4, color: Theme.of(context).dividerColor.withValues(alpha: 0.22)),
+                ListTile(
+                    title: const Text("GitHub (ProxyPin)"),
+                    trailing: const Icon(Icons.open_in_new, size: 22),
+                    onTap: () {
+                      _safeLaunch(Uri.parse(gitHubFrom));
                     }),
                 Divider(height: 0, thickness: 0.4, color: Theme.of(context).dividerColor.withValues(alpha: 0.22)),
                 ListTile(
@@ -75,18 +89,18 @@ class _AboutState extends State<About> {
                       _safeLaunch(Uri.parse("$gitHub/issues"));
                     }),
                 Divider(height: 0, thickness: 0.4, color: Theme.of(context).dividerColor.withValues(alpha: 0.22)),
-                ListTile(
-                    title: Text(localizations.appUpdateCheckVersion),
-                    trailing: checkUpdating
-                        ? const SizedBox(width: 22, height: 22, child: CircularProgressIndicator(strokeWidth: 2))
-                        : const Icon(Icons.sync, size: 22),
-                    onTap: () async {
-                      if (checkUpdating) return;
-                      setState(() => checkUpdating = true);
-                      await AppUpdateRepository.checkUpdate(context, canIgnore: false, showToast: true);
-                      if (mounted) setState(() => checkUpdating = false);
-                    }),
-                Divider(height: 0, thickness: 0.4, color: Theme.of(context).dividerColor.withValues(alpha: 0.22)),
+                // ListTile(
+                //     title: Text(localizations.appUpdateCheckVersion),
+                //     trailing: checkUpdating
+                //         ? const SizedBox(width: 22, height: 22, child: CircularProgressIndicator(strokeWidth: 2))
+                //         : const Icon(Icons.sync, size: 22),
+                //     onTap: () async {
+                //       if (checkUpdating) return;
+                //       setState(() => checkUpdating = true);
+                //       await AppUpdateRepository.checkUpdate(context, canIgnore: false, showToast: true);
+                //       if (mounted) setState(() => checkUpdating = false);
+                //     }),
+                // Divider(height: 0, thickness: 0.4, color: Theme.of(context).dividerColor.withValues(alpha: 0.22)),
                 ListTile(
                     title: Text(localizations.download),
                     trailing: const Icon(Icons.open_in_new, size: 22),
@@ -113,14 +127,14 @@ class _AboutState extends State<About> {
                         ),
                       );
                     }),
-                Divider(height: 0, thickness: 0.4, color: Theme.of(context).dividerColor.withValues(alpha: 0.22)),
-                // Sponsor / Donate entry
-                ListTile(
-                  title: Text(localizations.sponsorDonate),
-                  subtitle: Text(localizations.sponsorSupport, style: const TextStyle(fontSize: 12)),
-                  trailing: const Icon(Icons.favorite, color: Colors.redAccent, size: 22),
-                  onTap: () => _showSponsorDialog(localizations, sponsorUrl),
-                ),
+                // Divider(height: 0, thickness: 0.4, color: Theme.of(context).dividerColor.withValues(alpha: 0.22)),
+                // // Sponsor / Donate entry
+                // ListTile(
+                //   title: Text(localizations.sponsorDonate),
+                //   subtitle: Text(localizations.sponsorSupport, style: const TextStyle(fontSize: 12)),
+                //   trailing: const Icon(Icons.favorite, color: Colors.redAccent, size: 22),
+                //   onTap: () => _showSponsorDialog(localizations, sponsorUrl),
+                // ),
               ]))
         ]));
   }

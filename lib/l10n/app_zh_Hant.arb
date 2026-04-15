@@ -233,7 +233,7 @@
   "shareCurl": "分享 cURL 請求",
   "shareRequestResponse": "分享請求和回應",
   "captureDetail": "抓包詳情",
-  "proxyPinSoftware": "ProxyPin全平台開源抓包軟體",
+  "proxyPinSoftware": "基於ProxyPin全平台開源抓包軟體",
   "prompt": "提示",
   "curlSchemeRequest": "識別到curl格式，是否轉換為HTTP請求？",
   "appExitTips": "再按一次退出程式",

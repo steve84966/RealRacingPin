@@ -727,7 +727,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get captureDetail => 'Capture Detail';
 
   @override
-  String get proxyPinSoftware => 'ProxyPin Open source traffic capture software for all platforms';
+  String get proxyPinSoftware => 'Based on ProxyPin Open source traffic capture software for all platforms';
 
   @override
   String get prompt => 'Prompt';
