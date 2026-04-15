@@ -1075,6 +1075,15 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get view => '查看';
+
+  @override
+  String get timeOffset => '时光机：';
+
+  @override
+  String get invalidNumber => '无效输入';
+
+  @override
+  String get timeOffsetSaved => '时光机已保存';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -2146,4 +2155,13 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get view => '檢視';
+
+  @override
+  String get timeOffset => '時間偏移：';
+
+  @override
+  String get invalidNumber => '無效輸入';
+
+  @override
+  String get timeOffsetSaved => '偏移設定已存儲';
 }

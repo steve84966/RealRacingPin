@@ -377,5 +377,9 @@
 
   "local": "Local",
   "remoteUrl": "Remote URL",
-  "view": "View"
+  "view": "View",
+
+  "timeOffset": "Time Offset: ",
+  "invalidNumber": "Invalid input",
+  "timeOffsetSaved": "Time offset saved"
 }

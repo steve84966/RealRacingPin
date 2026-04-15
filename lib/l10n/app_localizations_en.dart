@@ -1088,4 +1088,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get view => 'View';
+
+  @override
+  String get timeOffset => 'Time Offset: ';
+
+  @override
+  String get invalidNumber => 'Invalid input';
+
+  @override
+  String get timeOffsetSaved => 'Time offset saved';
 }

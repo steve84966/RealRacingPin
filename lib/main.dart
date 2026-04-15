@@ -29,11 +29,14 @@ import 'package:proxypin/utils/navigator.dart';
 import 'package:proxypin/utils/platform.dart';
 
 import 'l10n/app_localizations.dart';
+import 'network/util/time_offset_config.dart';
 
 ///主入口
 ///@author wanghongen
 void main(List<String> args) async {
   WidgetsFlutterBinding.ensureInitialized();
+  //GLOBAL RR3 SETTINGS LOAD.
+  await TimeOffsetConfig.instance.load();
 
   //多窗口
   if (args.firstOrNull == 'multi_window') {

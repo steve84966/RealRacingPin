@@ -378,5 +378,9 @@
 
   "local": "本地",
   "remoteUrl": "远程URL",
-  "view": "查看"
+  "view": "查看",
+
+  "timeOffset": "时光机：",
+  "invalidNumber": "无效输入",
+  "timeOffsetSaved": "时光机已保存"
 }

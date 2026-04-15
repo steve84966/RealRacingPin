@@ -41,6 +41,7 @@ import 'package:proxypin/ui/mobile/widgets/about.dart';
 import 'package:proxypin/ui/mobile/setting/request_breakpoint.dart';
 
 import '../../../network/components/manager/request_breakpoint_manager.dart';
+import '../../component/time_offset_widget.dart';
 import '../../component/widgets.dart';
 import '../setting/proxy.dart';
 import '../setting/request_map.dart';
@@ -238,6 +239,12 @@ class SettingPage extends StatelessWidget {
                   side: BorderSide(color: Theme.of(context).dividerColor.withValues(alpha: 0.13)),
                   borderRadius: BorderRadius.circular(10)),
               child: Column(children: [
+                //设置：时光机
+                TimeOffsetWidget(
+                  title: localizations.timeOffset,
+                  textStyle: const TextStyle(fontSize: 16),
+                ),
+                Divider(height: 0, thickness: 0.3, color: Theme.of(context).dividerColor.withValues(alpha: 0.22)),
                 PortWidget(
                     proxyServer: proxyServer,
                     title: '${localizations.proxy}${isEn ? ' ' : ''}${localizations.port}',

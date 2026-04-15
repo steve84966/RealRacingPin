@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:proxypin/network/bin/listener.dart';
 import 'package:proxypin/network/channel/channel.dart';
@@ -12,6 +13,7 @@ import 'package:proxypin/network/http/http_client.dart';
 import 'package:proxypin/network/http/http_headers.dart';
 import 'package:proxypin/network/util/logger.dart';
 import 'package:proxypin/network/util/proxy_helper.dart';
+import 'package:proxypin/network/util/time_offset_config.dart';
 import 'package:proxypin/network/util/attribute_keys.dart';
 import 'package:proxypin/network/util/uri.dart';
 import 'package:proxypin/utils/ip.dart';
@@ -68,8 +70,43 @@ class HttpProxyChannelHandler extends ChannelHandler<HttpRequest> {
   Future<void> forward(ChannelContext channelContext, Channel channel, HttpRequest httpRequest) async {
     // log.d("[${channel.id}] ${httpRequest.method.name} ${httpRequest.requestUrl}");
     if (channel.error != null) {
-      ProxyHelper.exceptionHandler(channelContext, channel, listener, httpRequest, channel.error);
-      return;
+      //has some error...
+      if ("/time" == httpRequest.uri && //time request
+              "0037-connect.cloudcell.com" == httpRequest.hostAndPort?.host && //rr3 host
+              channel.error
+                  is SocketException //DNS failed, got a "host lookup fail". For distinguish -2: HandshakeException (CA Error)
+          ) {
+        //get time
+        var timestampStd=DateTime.timestamp();
+        var timestampMs=timestampStd.millisecondsSinceEpoch;
+        var offset = TimeOffsetConfig.instance.offsetMs;
+        timestampMs+=offset;
+        var timeStr = (timestampMs / 1000).toStringAsFixed(3);
+        var timestampOffsetToString=DateTime.fromMillisecondsSinceEpoch(timestampMs);
+        var utcStr = timestampOffsetToString.toIso8601String();
+        //debugger
+        log.d("ProxyPin Build response for RR3, return time $timeStr ,$utcStr");
+        //build response
+        final response = HttpResponse(
+          HttpStatus(204, "No Content"),
+          protocolVersion: httpRequest.protocolVersion,
+        );
+        response.headers.set("X-Request-Start", timeStr); //core timestamp
+        response.headers.set("Content-Length", "0");
+        response.headers.set("ISO-8601-Time", utcStr); //add a readable time.
+        // empty body
+        response.body = [];
+        //link to UI
+        httpRequest.response = response;
+        listener?.onRequest(channel, httpRequest);
+        listener?.onResponse(channelContext, response);
+        //response to rr3
+        await channel.writeAndClose(channelContext, response);
+        return;
+      } else {
+        ProxyHelper.exceptionHandler(channelContext, channel, listener, httpRequest, channel.error);
+        return;
+      }
     }
 
     //获取远程连接

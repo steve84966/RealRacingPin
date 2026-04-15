@@ -2195,6 +2195,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'View'**
   String get view;
+
+  /// No description provided for @timeOffset.
+  ///
+  /// In en, this message translates to:
+  /// **'Time Offset: '**
+  String get timeOffset;
+
+  /// No description provided for @invalidNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid input'**
+  String get invalidNumber;
+
+  /// No description provided for @timeOffsetSaved.
+  ///
+  /// In en, this message translates to:
+  /// **'Time offset saved'**
+  String get timeOffsetSaved;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
