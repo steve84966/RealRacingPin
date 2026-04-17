@@ -24,7 +24,7 @@
 
 ![image](example_images/1401.jpg)
 
-- 时光机(截图时手机时间为(2026-04-17T19:24:35.013))
+- 时光机（截图时，手机时间为 2026-04-17T19:24:35.013）
 
 ![image](example_images/timeoffset.jpg)
 
