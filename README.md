@@ -1,46 +1,33 @@
-# ProxyPin
+# RealRacingPin
 
 English | [中文](README_CN.md)
-## Open source free traffic capture HTTP(S)，Support Windows、Mac、Android、IOS、Linux Full platform system
 
-You can use it to intercept, inspect & rewrite HTTP(S) traffic, Support capturing Flutter app traffic, ProxyPin is based on Flutter develop, and the UI is beautiful
-and easy to use.
+An app for RealRacing3 verifying the network server timestamp. Based on [ProxyPin](https://github.com/wanghongenpin/proxypin)v1.2.7。
+
+You can use it to intercept, inspect & rewrite HTTP(S) traffic.
+
+---
 
 ## Features
-* Mobile scan code connection: no need to manually configure WiFi proxy, including configuration synchronization. All terminals can scan codes to connect and forward traffic to each other.
-* Domain name filtering: Only intercept the traffic you need, and do not intercept other traffic to avoid interference with other applications.
-* Search: Search requests according to keywords, response types and other conditions
-* Script: Support writing JavaScript scripts to process requests or responses.
-* Request Rewrite: Support redirection, support replacement of request or response message, and can also modify request or response according to the increase.
-* Request Mapping: Do not request remote services, use local configuration or scripts for response
-* Request Decryption: Configure AES decryption key to automatically decrypt HTTP message body
-* Request Blocking: Support blocking requests according to URL, and do not send requests to the server.
-* History: Automatically save the captured traffic data for easy backtracking and viewing. Support HAR format export and import.
-* Others: Favorites, toolbox, common encoding tools, as well as QR codes, regular expressions, etc.
 
-**Mac will prompt untrusted developers when first opened, you need to go to System Preferences-Security & Privacy-Allow any source.**
+- After starting capture, it'll automatically respond to the server network verification from Real Racing 3.
 
-## Sponsors
+- Timestamp offset. This is for ROUND HUB. 
 
-If ProxyPin is helpful to you, you are welcome to support us in the following ways to help the project develop in the long term:
+## Download
 
-* [Buy Me A Coffee](https://buymeacoffee.com/proxypin)
-* [AFDIAN](https://afdian.com/a/proxypin)
-* Submit feedback and suggestions to help us improve
-* Contribute code or documentation to the project
+Now it's in alpha testing. If all good, I'll put it in Github Release page. (A few weeks later.)
 
-**Your support will be used for project maintenance, feature development, and user experience optimization. Thank you very much!**
+## How to use
 
-## Downloads
+[(Click here (ZH_CN))](https://ycna0fgq1dzb.feishu.cn/wiki/ZQxVwLU70ink4vkwU8hcRFk8nEc)
 
-Github Releases: https://github.com/wanghongenpin/proxypin/releases
+## Thanks
 
-iOS App Store：https://apps.apple.com/app/proxypin/id6450932949
+- Project [ProxyPin](https://github.com/wanghongenpin/proxypin), and those who contribute it.
 
-Android Google Play：https://play.google.com/store/apps/details?id=com.network.proxy
+- All those who are dedicated to researching and reviving this game on the [Baidu Tieba](https://tieba.baidu.com/f?kw=%E7%9C%9F%E5%AE%9E%E8%B5%9B%E8%BD%A63&ie=utf-8).
 
-TG: https://t.me/proxypin_en
+## Todo
 
-**We will continue to improve the features and experience, as well as optimize the UI.**
-
-<img alt="image"  width="580px" height="420px"  src="https://github.com/user-attachments/assets/6c1345ab-c95c-415d-ac59-470c764b59a2">.<img alt="image"  height="500px" src="https://github.com/user-attachments/assets/3c5572b0-a9e5-497c-8b42-f935e836c164">
+- Changed logic to enable capture in **Airplane mode**.
