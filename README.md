@@ -30,4 +30,4 @@ Now it's in alpha testing. If all good, I'll put it in Github Release page. (A f
 
 ## Todo
 
-- Changed logic to enable capture in **Airplane mode**.
+- Change logic to enable capture in **Airplane mode**.
