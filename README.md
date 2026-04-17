@@ -14,13 +14,30 @@ You can use it to intercept, inspect & rewrite HTTP(S) traffic.
 
 - Timestamp offset. This is for ROUND HUB. 
 
+## examples
+
+- Daily Sign-in v7.6.0 
+
+![image](example_images/0760.jpg)
+
+- Daily Sign-in v14.0.1 
+
+![image](example_images/1401.jpg)
+
+- Timestamp offset. (the real time is 2026-04-17T19:24:35.013). You can read the timestamp response to game from "ISO-8601-Time".
+
+![image](example_images/timeoffset.jpg)
+
+
 ## Download
 
 Now it's in alpha testing. If all good, I'll put it in Github Release page. (A few weeks later.)
 
+You can get a BauduNetdisk link in the Guide. (it's temporary)
+
 ## How to use
 
-[(Click here (ZH_CN))](https://ycna0fgq1dzb.feishu.cn/wiki/ZQxVwLU70ink4vkwU8hcRFk8nEc)
+[Guide (ZH_CN)](https://ycna0fgq1dzb.feishu.cn/wiki/ZQxVwLU70ink4vkwU8hcRFk8nEc)
 
 ## Thanks
 
