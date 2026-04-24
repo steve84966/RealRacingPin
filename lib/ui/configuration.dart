@@ -65,6 +65,8 @@ class ThemeModel {
 class AppConfiguration {
   static const String version = "1.2.7";
 
+  static const String unixBuildTime = "1777057458";
+
   ValueNotifier<bool> globalChange = ValueNotifier(false);
 
   ThemeModel _theme = ThemeModel();

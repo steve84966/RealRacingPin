@@ -2213,6 +2213,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Time offset saved'**
   String get timeOffsetSaved;
+
+  /// No description provided for @supportVersions.
+  ///
+  /// In en, this message translates to:
+  /// **'Real Racing 3 v14.0.1 ~ v7.6.0 Supported.'**
+  String get supportVersions;
+
+  /// No description provided for @toBeConfirmVersions.
+  ///
+  /// In en, this message translates to:
+  /// **'Earlier versions were not tested. It\'s worth to try.'**
+  String get toBeConfirmVersions;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

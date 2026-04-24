@@ -357,5 +357,8 @@
 
   "timeOffset": "時間偏移：",
   "invalidNumber": "無效輸入",
-  "timeOffsetSaved": "偏移設定已存儲"
+  "timeOffsetSaved": "偏移設定已存儲",
+
+  "supportVersions":"已支持RR3版本: 14.0.1 ~ 7.6.0",
+  "toBeConfirmVersions":"更早的版本未實際測驗，建議自行嘗試。"
 }

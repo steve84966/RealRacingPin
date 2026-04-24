@@ -1084,6 +1084,12 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get timeOffsetSaved => '时光机已保存';
+
+  @override
+  String get supportVersions => '已支持RR3版本: 14.0.1 ~ 7.6.0';
+
+  @override
+  String get toBeConfirmVersions => '更早的版本未实际验证，可自行尝试';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -2164,4 +2170,10 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get timeOffsetSaved => '偏移設定已存儲';
+
+  @override
+  String get supportVersions => '已支持RR3版本: 14.0.1 ~ 7.6.0';
+
+  @override
+  String get toBeConfirmVersions => '更早的版本未實際測驗，建議自行嘗試。';
 }

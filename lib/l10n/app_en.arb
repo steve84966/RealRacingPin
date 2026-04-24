@@ -381,5 +381,8 @@
 
   "timeOffset": "Time Offset: ",
   "invalidNumber": "Invalid input",
-  "timeOffsetSaved": "Time offset saved"
+  "timeOffsetSaved": "Time offset saved",
+
+  "supportVersions":"Real Racing 3 v14.0.1 ~ v7.6.0 Supported.",
+  "toBeConfirmVersions":"Earlier versions were not tested. It's worth to try."
 }

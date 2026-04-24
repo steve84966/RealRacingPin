@@ -46,20 +46,20 @@ class _AboutState extends State<About> {
         appBar: AppBar(title: Text(localizations.about, style: const TextStyle(fontSize: 16)), centerTitle: true),
         body: ListView(padding: const EdgeInsets.all(12), children: [
           const SizedBox(height: 6),
-          Center(child: Text("ProxyPin for Real Racing 3", style: Theme.of(context).textTheme.headlineSmall)),
+          Center(child: Text("Real Racing Pin", style: Theme.of(context).textTheme.headlineSmall)),
           const SizedBox(height: 10),
           Center(
               child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Text(localizations.proxyPinSoftware, textAlign: TextAlign.center))),
           const SizedBox(height: 6),
-          Center(child: Text("Real Racing 3 v14.0.1 Supported.",style:Theme.of(context).textTheme.bodySmall)),
+          Center(child: Text(localizations.supportVersions,style:Theme.of(context).textTheme.bodySmall)),
 
-          Center(child: Text("The earlier versions were not tested. You can try it.",style:Theme.of(context).textTheme.bodySmall)),
+          Center(child: Text(localizations.toBeConfirmVersions,style:Theme.of(context).textTheme.bodySmall)),
           const SizedBox(height: 10),
-          Center(child: Text("Version ${AppConfiguration.version}(alpha)")),
+          Center(child: Text("Version ${AppConfiguration.version}(beta)")),
           const SizedBox(height: 2),
-          Center(child: Text("BuildTime: 1776256962(unix)")),
+          Center(child: Text("BuildTime: unix ${AppConfiguration.unixBuildTime}")),
           const SizedBox(height: 12),
           Card(
               color: Colors.transparent,

@@ -1097,4 +1097,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get timeOffsetSaved => 'Time offset saved';
+
+  @override
+  String get supportVersions => 'Real Racing 3 v14.0.1 ~ v7.6.0 Supported.';
+
+  @override
+  String get toBeConfirmVersions => 'Earlier versions were not tested. It\'s worth to try.';
 }
