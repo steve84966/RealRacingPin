@@ -31,9 +31,7 @@ You can use it to intercept, inspect & rewrite HTTP(S) traffic.
 
 ## Download
 
-Now it's in alpha testing. If all good, I'll put it in Github Release page. (A few weeks later.)
-
-You can get a BauduNetdisk link in the Guide. (it's temporary)
+Look at Github Release page. 
 
 ## How to use
 
