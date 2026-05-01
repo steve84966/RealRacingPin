@@ -24,11 +24,11 @@ You can use it to intercept, inspect & rewrite HTTP(S) traffic.
 
 ![image](example_images/1401.jpg)
 
-- Timestamp offset. (the real time is 2026-04-17T19:24:35.013). You can read the timestamp response to game from "ISO-8601-Time". This is for some special things. Such as:
- - In RR3 14.0.1, set it to a proper time can play all events in the roundhub. (**DO NOT** earlier than 210731, otherwise an extra force download is needed. I set to 210801 with -1734)
- - Buy NASCARs and Supercars in old versions(back to 2019 is enough. I set it to 2016 with -3619. As for the download, I can skip it by replace files. [See here(Baidu Tieba, ZH_CN)](https://tieba.baidu.com/p/10578188276)).
- - Using it with older versions of the game to play special events.
- - If you miss the previous day's sign-in, you can make up for it.
+- Timestamp offset. You can read the timestamp response to game from "ISO-8601-Time". This is for some special things. Such as:
+  - In RR3 14.0.1, set it to a proper time can play all events in the roundhub. (**DO NOT** earlier than 210731, otherwise an extra force download is needed. I set to 210801 with -1734)
+  - Buy NASCARs and Supercars in old versions(back to 2019 is enough. I set it to 2016 with -3619. As for the download, I can skip it by replace files. [See here(Baidu Tieba, ZH_CN)](https://tieba.baidu.com/p/10578188276)).
+  - Using it with older versions of the game to play special events.
+  - If you miss the previous day's sign-in, you can make up for it.
 
 ![image](example_images/timeoffset.jpg)
 
