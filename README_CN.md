@@ -24,19 +24,22 @@
 
 ![image](example_images/1401.jpg)
 
-- 时光机（截图时，手机时间为 2026-04-17T19:24:35.013）
+- 时光机
+ - 于 14.0.1 版本参加任意轮次赛事
+ - 旧版本开启特殊赛事、购买绝版车辆（如纳斯卡）
+ - 任意日期补签
 
 ![image](example_images/timeoffset.jpg)
 
 ## 下载地址
 
-Github Release 页
+[Github Release 页](https://github.com/steve84966/RealRacingPin/releases)
 
 **也可在使用文档中获取网盘下载链接**。
 
 ## 详细使用教程
 
-[点此查看使用文档](https://ycna0fgq1dzb.feishu.cn/wiki/ZQxVwLU70ink4vkwU8hcRFk8nEc)
+[点此查看详细图文使用教程](https://ycna0fgq1dzb.feishu.cn/wiki/ZQxVwLU70ink4vkwU8hcRFk8nEc)
 
 ## 致谢
 
