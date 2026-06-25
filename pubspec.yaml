@@ -2,7 +2,7 @@ name: proxypin
 description: RealRacingPin
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-version: 1.2.7+32
+version: 1.2.7+33
 
 environment:
   sdk: '>=3.0.2 <4.0.0'
@@ -66,3 +66,4 @@ flutter:
     - assets/icon.png
     - assets/icon_foreground.png
     - assets/js/
+    - assets/EasterEgg.gif

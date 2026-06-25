@@ -50,7 +50,7 @@ class ColorMapping {
 class ThemeModel {
   ThemeMode mode;
   bool useMaterial3;
-  String color = "Pink";
+  String color = "Blue";//"Pink";
 
   ThemeModel({this.mode = ThemeMode.system, this.useMaterial3 = true});
 
@@ -63,9 +63,9 @@ class ThemeModel {
 }
 
 class AppConfiguration {
-  static const String version = "1.2.7";
+  static const String version = "1.2.7.2";
 
-  static const String unixBuildTime = "1777057458";
+  static const String unixBuildTime = "1782391501";
 
   ValueNotifier<bool> globalChange = ValueNotifier(false);
 
@@ -73,7 +73,7 @@ class AppConfiguration {
   Locale? _language;
 
   //是否显示更新内容公告
-  bool upgradeNoticeV27 = true;
+  bool upgradeNoticeV1_2_7_2 = true;
 
   /// 是否启用画中画
   ValueNotifier<bool> pipEnabled = ValueNotifier(Platform.isAndroid);
@@ -201,7 +201,8 @@ class AppConfiguration {
       _theme = ThemeModel(mode: mode, useMaterial3: config['useMaterial3'] ?? true);
       _theme.color = config['themeColor'] ?? "Blue";
 
-      upgradeNoticeV27 = config['upgradeNoticeV27'] ?? true;
+      upgradeNoticeV1_2_7_2 = config['upgradeNoticeV1_2_7_2'] ?? true;
+
       _language = config['language'] == null 
         ? null 
         : Locale.fromSubtags(
@@ -214,6 +215,10 @@ class AppConfiguration {
       headerViewMode = config['headerViewMode'] ?? "table";
       bottomNavigation = config['bottomNavigation'] ?? true;
       memoryCleanupThreshold = config['memoryCleanupThreshold'];
+      if(upgradeNoticeV1_2_7_2){
+        //firstOpen
+        memoryCleanupThreshold??=512;
+      }
       autoReadEnabled = config['autoReadEnabled'] ?? true;
 
       windowSize =
@@ -253,7 +258,7 @@ class AppConfiguration {
       'mode': _theme.mode.name,
       'themeColor': _theme.color,
       'useMaterial3': _theme.useMaterial3,
-      'upgradeNoticeV27': upgradeNoticeV27,
+      'upgradeNoticeV1_2_7_2': upgradeNoticeV1_2_7_2,
       "language": _language?.languageCode,
       "languageScript": _language?.scriptCode,
       "headerExpanded": headerExpanded,

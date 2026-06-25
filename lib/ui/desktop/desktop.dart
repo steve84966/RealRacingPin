@@ -106,7 +106,7 @@ class _DesktopHomePagePageState extends State<DesktopHomePage> implements EventL
       }
     });
 
-    if (widget.appConfiguration.upgradeNoticeV27) {
+    if (widget.appConfiguration.upgradeNoticeV1_2_7_2) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
         showUpgradeNotice();
       });
@@ -181,7 +181,7 @@ class _DesktopHomePagePageState extends State<DesktopHomePage> implements EventL
               actions: [
                 TextButton(
                     onPressed: () {
-                      widget.appConfiguration.upgradeNoticeV27 = false;
+                      widget.appConfiguration.upgradeNoticeV1_2_7_2 = false;
                       widget.appConfiguration.flushConfig();
                       Navigator.pop(context);
                     },

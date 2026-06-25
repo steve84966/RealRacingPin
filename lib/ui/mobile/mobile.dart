@@ -126,7 +126,7 @@ class MobileHomeState extends State<MobileHomePage> implements EventListener, Li
     proxyServer.start();
     _remoteHistorySubscription = HistoryStorage.onRemoteImported.listen((item) => _openHistoryPage(item));
 
-    if (widget.appConfiguration.upgradeNoticeV27) {
+    if (widget.appConfiguration.upgradeNoticeV1_2_7_2) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
         showUpgradeNotice();
       });
@@ -334,26 +334,14 @@ class MobileHomeState extends State<MobileHomePage> implements EventListener, Li
 
     String content = isCN
         ? '提示：默认不会开启HTTPS抓包，请安装证书后再开启HTTPS抓包。\n\n'
-            '1. 新增html、css、js格式化以及代码高亮；\n'
-            '2. 高级重发支持指定时间；\n'
-            '3. 域名列表增加导出har文件；\n'
-            '4. 远程设备增加快速分享；\n'
-            '5. 收藏支持websocket消息持久化；\n'
-            '6. 远程脚本加载添加引导；\n'
-            '7. 优化消息体大文本展示；\n'
-            '8. 修复自定已读状态丢失问题；\n'
+            '1. 增加了时光机的 年-月-日 输入模式\n2. 修改了初次启动时的部分默认配置\n\n本软件完全开源免费，基于ProxyPin v1.2.7改造。\n'
         : 'Note: HTTPS capture is disabled by default — please install the certificate before enabling HTTPS capture.\n\n'
-            '1. Added HTML, CSS, and JS formatting with code highlighting;\n'
-            '2. Advanced repeat now supports specifying the time;\n'
-            '3. Added HAR file export for domain list;\n'
-            '4. Added quick share for remote devices;\n'
-            '5. Favorites support WebSocket message persistence;\n'
-            '6. Added guidance for remote script loading;\n'
-            '7. Optimized large text display in message body;\n'
-            '8. Fixed issue where custom read status was lost;\n';
+            '1. Added a "TimeOffset" setting UI with YYYY-MM-DD.;\n'
+            '2. Change some default setting at first start;\n\n'
+            'This is an open-source software based on ProxyPin v1.2.7\n';
     showAlertDialog(isCN ? '更新内容V${AppConfiguration.version}' : "What's new in V${AppConfiguration.version}", content,
         () {
-      widget.appConfiguration.upgradeNoticeV27 = false;
+      widget.appConfiguration.upgradeNoticeV1_2_7_2 = false;
       widget.appConfiguration.flushConfig();
     });
   }

@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'dart:convert';
+import 'package:flutter/cupertino.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:proxypin/network/util/logger.dart';
 
@@ -25,11 +26,13 @@ class TimeOffsetConfig {
     _offsetDay=offset;
     _offsetMs=_offsetDay*dayToMs;
   }
+  ValueNotifier<int> offsetFlushNotify = ValueNotifier<int>(0);
 
   /// 设置偏移量并持久化
   Future<void> setOffset(int offset) async {
     offsetDay = offset;
     await _saveToFile();
+    offsetFlushNotify.value = offsetDay;
   }
 
   /// 加载配置（应用启动时调用一次）
@@ -46,6 +49,7 @@ class TimeOffsetConfig {
       logger.e('Failed to load time offset config', error: e, stackTrace: st);
       offsetDay = 0;
     }
+    offsetFlushNotify.value = offsetDay;
   }
 
   Future<void> _saveToFile() async {

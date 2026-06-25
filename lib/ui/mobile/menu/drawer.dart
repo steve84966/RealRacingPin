@@ -242,11 +242,16 @@ class _SettingPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10)),
               child: Column(children: [
                 //设置：时光机
-                TimeOffsetWidget(
+                TimeOffsetDateWidget(
                   title: localizations.timeOffset,
                   textStyle: const TextStyle(fontSize: 16),
                 ),
                 Divider(height: 0, thickness: 0.3, color: Theme.of(context).dividerColor.withValues(alpha: 0.22)),
+                TimeOffsetWidget(
+                  title: localizations.timeOffset,
+                  textStyle: const TextStyle(fontSize: 16),
+                ),
+                Divider(height: 0, thickness: 3, color: Theme.of(context).dividerColor.withValues(alpha: 0.22)),
                 PortWidget(
                     proxyServer: proxyServer,
                     title: '${localizations.proxy}${isEn ? ' ' : ''}${localizations.port}',

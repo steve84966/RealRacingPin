@@ -88,14 +88,14 @@ class Configuration {
     startup = config['startup'] ?? Platforms.isDesktop();
     enableSystemProxy = config['enableSystemProxy'] ?? (config['enableDesktop'] ?? true);
     enableSocks5 = config['enableSocks5'] ?? true;
-    enabledHttp2 = config['enabledHttp2'] ?? false;
+    enabledHttp2 = config['enabledHttp2'] ?? true;//RR pin
 
     proxyPassDomains = config['proxyPassDomains'] ?? SystemProxy.proxyPassDomains;
     historyCacheTime = config['historyCacheTime'] ?? 0;
     if (config['externalProxy'] != null) {
       externalProxy = ProxyInfo.fromJson(config['externalProxy']);
     }
-    appWhitelist = List<String>.from(config['appWhitelist'] ?? []);
+    appWhitelist = List<String>.from(config['appWhitelist'] ?? ["com.ea.games.r3_na","com.ea.games.r3_row"]);
     appWhitelistEnabled = config['appWhitelistEnabled'] ?? true;
     appBlacklist = config['appBlacklist'] == null ? null : List<String>.from(config['appBlacklist']);
     HostFilter.whitelist.load(config['whitelist']);
